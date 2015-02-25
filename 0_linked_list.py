@@ -46,14 +46,10 @@ class GroceryList:
       print(node.data)
       self.display(node.next)
 
-  # def display(self):
-  #   current_node = self.root
-  #   while current_node is not None:
-  #     print(current_node.data)
-  #     current_node = current_node.next
-
-  def display_reverse():
-    pass
+  def display_reverse(self, node):
+    if node.next != None:
+      self.display_reverse(node.next)
+      print(node.data)
 
   def sort():
     pass
@@ -63,6 +59,19 @@ groceries.add("cookies")
 groceries.add("ice cream")
 groceries.add("pizza")
 groceries.display(groceries.root)
+
+print("-------")
+groceries.display_reverse(groceries.root)
+
+
+
+
+
+
+
+
+
+
 
 # print(groceries.at(1))  # => "ice cream"
 
