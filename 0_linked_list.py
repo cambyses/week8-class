@@ -38,6 +38,14 @@ class GroceryList:
 
       current_node.next = new_node
 
+  def find(self, data):
+    node = self.root
+    while node != None and node.data != data:
+      node = node.next
+
+    return node != None
+
+
   def at():
     pass
 
@@ -62,6 +70,11 @@ groceries.display(groceries.root)
 
 print("-------")
 groceries.display_reverse(groceries.root)
+
+if groceries.find("cookies"):
+  print("This is a good list!")
+else:
+  print("You should buy some cookies!")
 
 
 
